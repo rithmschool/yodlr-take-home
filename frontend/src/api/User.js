@@ -27,8 +27,9 @@ class User {
   /**
    * Update a user on backend.
    * @param {Number} id
+   * @param {Object} user - { email, firstName, lastName, state }
    */
-  static async update(id) {
+  static async update(id, user) {
     return await ApiHelper.request(`users/${id}`, user, "put");
   }
 
@@ -37,7 +38,7 @@ class User {
    * @param {Number} id
    */
   static async remove(id) {
-    return await ApiHelper.request(`users/${id}`, user, "delete");
+    return await ApiHelper.request(`users/${id}`, undefined, "delete");
   }
 }
 
