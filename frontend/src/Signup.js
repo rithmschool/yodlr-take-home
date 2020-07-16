@@ -55,7 +55,10 @@ const Signup = () => {
             <input type="text" className="form-control" id="input-email"
               name="email" value={formData.email} onChange={handleChange} />
           </div>
-          <button type="submit" className="btn btn-primary btn-block">Sign up</button>
+          <button type="submit" className="btn btn-primary btn-block"
+            disabled={Object.values(formData).some(field => field.length === 0)}>
+            Sign up
+          </button>
           {formError.length !== 0 &&
             <div className="alert alert-danger" role="alert">
               {formError}
