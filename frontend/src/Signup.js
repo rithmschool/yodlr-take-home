@@ -37,7 +37,7 @@ const Signup = () => {
   return (
     <div className="row justify-content-center mt-5">
       <div className="card col-md-6">
-        <form className="card-body" onSubmit={handleSubmit}>
+        <form className="card-body text-left" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group col-md-6">
               <label htmlFor="intput-first-name">First Name</label>
