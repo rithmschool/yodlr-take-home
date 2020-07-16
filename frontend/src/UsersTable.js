@@ -36,10 +36,12 @@ const UsersTable = () => {
               <td>{user.state}</td>
               <td>
                 {user.state === "pending" &&
-                  <button className="btn btn-warning" onClick={() => handleActivate(user)}>Activate</button>}
+                  <button className="btn btn-warning" onClick={() => handleActivate(user)} data-testid={`activateBtn-${user.id}`}>
+                    Activate
+                  </button>}
               </td>
               <td>
-                <button className="btn text-danger" onClick={() => dispatch(removeUser(user.id))}>
+                <button className="btn text-danger" onClick={() => dispatch(removeUser(user.id))} data-testid={`removeBtn-${user.id}`}>
                   <i className="fa fa-times" aria-hidden="true"></i>
                 </button>
               </td>

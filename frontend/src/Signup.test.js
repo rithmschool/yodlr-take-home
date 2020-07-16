@@ -5,7 +5,7 @@ import { getByLabelText, getByText, render, fireEvent } from '@testing-library/r
 import { addUser } from './reducer/users/action'
 import Signup from './Signup';
 
-const mockDispatch = jest.fn();
+
 jest.mock('react-redux', () => ({
   useSelector: jest.fn(),
   useDispatch: jest.fn()
