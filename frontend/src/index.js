@@ -10,6 +10,7 @@ import './index.css';
 import rootReducer from './reducer/rootReducer';
 import * as serviceWorker from './serviceWorker';
 
+import "@fortawesome/fontawesome-free/css/all.css";
 
 
 const store = createStore(

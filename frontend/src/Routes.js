@@ -1,11 +1,12 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import Home from './Home';
+import UsersTable from './UsersTable';
 
 const Routes = () => (
   <Switch>
     <Route exact path="/admin">
-      <p>list of users</p>
+      <UsersTable />
     </Route>
     <Route exact path="/signup">
       <p>signup form</p>
