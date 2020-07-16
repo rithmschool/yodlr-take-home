@@ -1,0 +1,9 @@
+  .Nav a {
+    text-decoration: none;
+    color: black;
+    margin: auto 1rem;
+}
+
+.Nav a.active{
+    font-weight: bold;
+}
