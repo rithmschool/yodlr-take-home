@@ -1,10 +1,16 @@
 import React from 'react';
-import { useSelector, shallowEqual } from 'react-redux';
+import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+import { removeUser, updateUser } from './reducer/users/action';
 
 
 const UsersTable = () => {
   const data = useSelector(state => state.users, shallowEqual);
-  const users = Object.values(data).sort((a, b) => +a.id - b.id)
+  const users = Object.values(data).sort((a, b) => +a.id - b.id);
+  const dispatch = useDispatch();
+
+  const handleActivate = (user) => {
+    dispatch(updateUser({ ...user, state: "active" }));
+  }
 
   return (
     <div className="UsersTable card mt-5">
@@ -17,6 +23,7 @@ const UsersTable = () => {
             <th scope="col">Email</th>
             <th scope="col">State</th>
             <th scope="col"></th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -28,7 +35,11 @@ const UsersTable = () => {
               <td>{user.email}</td>
               <td>{user.state}</td>
               <td>
-                <button className="btn text-danger">
+                {user.state === "pending" &&
+                  <button className="btn btn-warning" onClick={() => handleActivate(user)}>Activate</button>}
+              </td>
+              <td>
+                <button className="btn text-danger" onClick={() => dispatch(removeUser(user.id))}>
                   <i className="fa fa-times" aria-hidden="true"></i>
                 </button>
               </td>

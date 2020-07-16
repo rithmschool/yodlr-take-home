@@ -1,5 +1,5 @@
 import {
-  LOAD_USERS_TO_STORE, ADD_USER_TO_STORE, REMOVE_USER_FROM_STORE
+  LOAD_USERS_TO_STORE, ADD_USER_TO_STORE, REMOVE_USER_FROM_STORE, UPDATE_USER_IN_STORE
 } from './actionTypes';
 
 
@@ -19,6 +19,9 @@ function usersReducer(state = {}, action) {
       const data = { ...state };
       delete data[action.id];
       return data;
+
+    case UPDATE_USER_IN_STORE:
+      return { ...state, [action.user.id]: { ...action.user } };
 
     default:
       return state;

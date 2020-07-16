@@ -1,5 +1,5 @@
 import {
-  LOAD_USERS_TO_STORE, ADD_USER_TO_STORE, REMOVE_USER_FROM_STORE
+  LOAD_USERS_TO_STORE, ADD_USER_TO_STORE, REMOVE_USER_FROM_STORE, UPDATE_USER_IN_STORE
 } from './actionTypes';
 import User from '../../api/User';
 import { setError, resetError } from '../errors/action';
@@ -70,5 +70,23 @@ function loadUsers() {
   }
 }
 
+function updateStoredUser(user) {
+  return { type: UPDATE_USER_IN_STORE, user };
+}
 
-export { addUser, removeUser, loadUsers };
+function updateUser(user) {
+  return async function(dispatch) {
+    dispatch(resetError());
+
+    try {
+      await User.update(user.id, user)
+      dispatch(updateStoredUser(user));
+    } catch (error) {
+      console.error(error);
+      dispatch(setError(error.message));
+    }
+  }
+}
+
+
+export { addUser, removeUser, updateUser, loadUsers };
