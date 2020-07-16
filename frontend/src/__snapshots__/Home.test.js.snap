@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="row justify-content-center mt-5"
+  >
+    <div
+      class="card col-sm-8"
+    >
+      <div
+        class="card-body"
+      >
+        <h3>
+          Welcome to Yodlr
+        </h3>
+        <h5>
+          <i>
+            Please feel free to explore and learn more about what we can offer!
+          </i>
+        </h5>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="UsersTable card mt-5"
+  >
+    <table
+      class="table"
+    >
+      <thead>
+        <tr>
+          <th
+            scope="col"
+          >
+            #
+          </th>
+          <th
+            scope="col"
+          >
+            First Name
+          </th>
+          <th
+            scope="col"
+          >
+            Last Name
+          </th>
+          <th
+            scope="col"
+          >
+            Email
+          </th>
+          <th
+            scope="col"
+          >
+            State
+          </th>
+          <th
+            scope="col"
+          />
+          <th
+            scope="col"
+          />
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th
+            scope="row"
+          >
+            0
+          </th>
+          <td>
+            test0
+          </td>
+          <td>
+            user
+          </td>
+          <td />
+          <td>
+            active
+          </td>
+          <td />
+          <td>
+            <button
+              class="btn text-danger"
+              data-testid="removeBtn-0"
+            >
+              <i
+                aria-hidden="true"
+                class="fa fa-times"
+              />
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <th
+            scope="row"
+          >
+            1
+          </th>
+          <td>
+            test1
+          </td>
+          <td>
+            user
+          </td>
+          <td />
+          <td>
+            pending
+          </td>
+          <td>
+            <button
+              class="btn btn-warning"
+              data-testid="activateBtn-1"
+            >
+              Activate
+            </button>
+          </td>
+          <td>
+            <button
+              class="btn text-danger"
+              data-testid="removeBtn-1"
+            >
+              <i
+                aria-hidden="true"
+                class="fa fa-times"
+              />
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
+`;
