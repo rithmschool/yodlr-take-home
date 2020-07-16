@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import UsersTable from './UsersTable';
+import Signup from './Signup';
 
 const Routes = () => (
   <Switch>
@@ -9,7 +10,7 @@ const Routes = () => (
       <UsersTable />
     </Route>
     <Route exact path="/signup">
-      <p>signup form</p>
+      <Signup />
     </Route>
     <Route exact path="/">
       <Home />

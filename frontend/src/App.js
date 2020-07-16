@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { useDispatch } from 'react-redux';
-import { loadUsers } from './reducer/action';
+import { loadUsers } from './reducer/users/action';
 import Nav from './Nav';
 import Routes from './Routes';
 

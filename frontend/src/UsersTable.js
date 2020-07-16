@@ -29,7 +29,7 @@ const UsersTable = () => {
               <td>{user.state}</td>
               <td>
                 <button className="btn text-danger">
-                  <i class="fa fa-times" aria-hidden="true"></i>
+                  <i className="fa fa-times" aria-hidden="true"></i>
                 </button>
               </td>
             </tr>

@@ -1,7 +1,8 @@
 import {
   LOAD_USERS_TO_STORE, ADD_USER_TO_STORE, REMOVE_USER_FROM_STORE
 } from './actionTypes';
-import User from '../api/User';
+import User from '../../api/User';
+import { setError, resetError } from '../errors/action';
 
 
 function storeUser(user) {
@@ -14,11 +15,14 @@ function storeUser(user) {
  */
 function addUser(user) {
   return async function(dispatch) {
+    dispatch(resetError());
+
     try {
       const newUser = await User.create(user);
       dispatch(storeUser(newUser));
     } catch (error) {
       console.error(error);
+      setError(error.message);
     }
   }
 }
@@ -33,11 +37,14 @@ function removeUserFromStore(id) {
  */
 function removeUser(id) {
   return async function(dispatch) {
+    dispatch(resetError());
+
     try {
       await User.remove(id);
       dispatch(removeUserFromStore(id));
     } catch (error) {
       console.error(error);
+      dispatch(setError(error.message));
     }
   }
 }
@@ -51,11 +58,14 @@ function loadUsersToStore(users) {
  */
 function loadUsers() {
   return async function(dispatch) {
+    dispatch(resetError());
+
     try {
       const users = await User.getAll();
       dispatch(loadUsersToStore(users));
     } catch (error) {
       console.error(error);
+      dispatch(setError(error.message));
     }
   }
 }
