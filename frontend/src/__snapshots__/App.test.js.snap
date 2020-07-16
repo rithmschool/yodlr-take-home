@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <nav
+      class="Nav navbar navbar-light bg-white"
+    >
+      <span
+        class="navbar-brand"
+      >
+        Yodlr
+      </span>
+      <span>
+        <a
+          aria-current="page"
+          class="active"
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          href="/signup"
+        >
+          Sign Up
+        </a>
+        <a
+          href="/admin"
+        >
+          Admin
+        </a>
+      </span>
+    </nav>
+    <div
+      class="container"
+    >
+      <div
+        class="row justify-content-center mt-5"
+      >
+        <div
+          class="card col-sm-8"
+        >
+          <div
+            class="card-body"
+          >
+            <h3>
+              Welcome to Yodlr
+            </h3>
+            <h5>
+              <i>
+                Please feel free to explore and learn more about what we can offer!
+              </i>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
