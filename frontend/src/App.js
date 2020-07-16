@@ -3,6 +3,8 @@ import './App.css';
 import { useDispatch } from 'react-redux';
 import { loadUsers } from './reducer/action';
 import Nav from './Nav';
+import Routes from './Routes';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -14,6 +16,9 @@ function App() {
   return (
     <div className="App">
       <Nav />
+      <div className="container">
+        <Routes />
+      </div>
     </div>
   );
 }

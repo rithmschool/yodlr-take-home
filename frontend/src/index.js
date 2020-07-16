@@ -5,11 +5,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { applyMiddleware, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import App from './App';
+import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css';
 import rootReducer from './reducer/rootReducer';
 import * as serviceWorker from './serviceWorker';
 
-import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const store = createStore(

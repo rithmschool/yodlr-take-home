@@ -6,13 +6,13 @@ import './Nav.css';
 const Nav = () => {
 
   return (
-    <nav className="Nav navbar navbar-light bg-light">
+    <nav className="Nav navbar navbar-light bg-white">
       <span className="navbar-brand">Yodlr</span>
-      <div>
+      <span>
         <NavLink exact to="/">Home</NavLink>
         <NavLink exact to="/signup">Sign Up</NavLink>
         <NavLink exact to="/admin">Admin</NavLink>
-      </div>
+      </span>
     </nav>
   )
 }
