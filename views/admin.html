@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+{% block main_content %} 
+  <h3>Yodlr Admin Page</h3>
+  <p>{{ title }}</p>
+  
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr>
+          <th scope="row">{{ user.id }}</th>
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
