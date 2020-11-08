@@ -14,14 +14,21 @@ router.get('/', function(req, res) {
 
 /* Create a new user */
 router.post('/', function(req, res) {
+  
   var user = req.body;
   user.id = curId++;
   if (!user.state) {
     user.state = 'pending';
+  } else {
+    user.state = 'active';
   }
   users[user.id] = user;
   log.info('Created user', user);
-  res.json(user);
+  // res.json(user);
+
+  return res.render('index.html', {
+    message: `Hi, ${user.firstName}. Thank you for signing up`
+  });
 });
 
 /* Get a specific user by id */
