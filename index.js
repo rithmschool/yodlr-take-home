@@ -7,6 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var logger = require('./lib/logger');
 var cors = require('cors');
+var apiHelper = require('./api');
 
 var users = require('./routes/users');
 
@@ -34,17 +35,12 @@ app.get('/signup', function(req, res, next){
   return res.render('signup.html');
 });
 
-app.get('/admin', function(req, res, next){
-    // [
-    //   {id:1,email:"kyle@getyodlr.com",firstName:"Kyle",lastName:"White",state:"active"},  
-    //   {id:2,email:"jane@getyodlr.com",firstName:"Jane",lastName:"Stone",state:"active"}
-    // ];
+app.get('/admin', async function(req, res, next){
+
+  const response = await apiHelper.getUsers();
 
   return res.render('admin.html', {
-    users: [
-        {id:1,email:"kyle@getyodlr.com",firstName:"Kyle",lastName:"White",state:"active"},  
-        {id:2,email:"jane@getyodlr.com",firstName:"Jane",lastName:"Stone",state:"active"}
-      ]
+    users: response
   });
 });
 
