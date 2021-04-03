@@ -1,0 +1,36 @@
+body {
+  background-image: linear-gradient(to right, rgb(0, 204, 255) , rgb(245, 134, 255));
+}
+
+.trans-white-bg {
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 10px;
+}
+
+.center-row {
+  text-align:center;
+}
+
+h1 {
+  text-align: center; 
+  margin: 30px;
+}
+
+label {
+  width: 30%;
+}
+
+input {
+  margin: 5px;
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+ul {
+  list-style: circle;
+}
+
+li {
+  margin: 10px;
+}
