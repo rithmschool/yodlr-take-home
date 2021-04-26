@@ -109,18 +109,6 @@ If you have additional time after completing the requirements (we _think_ you sh
 
 To be perfectly clear, we don't expect that anyone could complete _all_ of these in 6-8 hours.  This is simply a list of ideas to inspire you.
 
-## Submission
-
-There are two ways that you can submit your solution to us.
-
-The first is to simply create a .zip file of the project directory and email it to [jobs@getyodlr.com](mailto:jobs@getyodlr.com) with the subject "Front End Code Challenge".
-
-Alternatively, you can follow the GitHub Fork/PR workflow by [forking this repository](https://github.com/yodlr/frontend-code-challenge/fork), commiting your changes, and submiting a pull request to us.  For more information about that, you can see this [GitHub article](https://help.github.com/articles/fork-a-repo/#propose-changes-to-someone-elses-project)
-
-## Questions / Problems / Stuck?
-
-You can either write us a [GitHub issue](https://github.com/yodlr/frontend-code-challenge/issues/new) or email us at [jobs@getyodlr.com](mailto:jobs@getyodlr.com).
-
 ## License
 
 We have licensed this project under the MIT license so that you may use this for a portfolio piece (or anything else!).
