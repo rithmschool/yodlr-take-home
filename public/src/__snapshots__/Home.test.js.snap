@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h3>
+      Welcome to the Yodlr Design Challenge!
+    </h3>
+    <p>
+      Click 'Sign Up' to register.
+    </p>
+    <a
+      class="btn btn-primary"
+      href="/signup"
+    >
+      Sign Up
+    </a>
+  </div>
+</DocumentFragment>
+`;

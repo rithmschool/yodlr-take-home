@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Routes"
+  >
+    <div>
+      <nav
+        class="navbar navbar-expand-md navbar-light bg-light"
+      >
+        <a
+          class="navbar-brand"
+          href="/"
+        >
+          Yodlr
+        </a>
+        <ul
+          class="mr-auto navbar-nav"
+        >
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/signup"
+            >
+              Register
+            </a>
+          </li>
+          <li
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              href="/login"
+            >
+              Login
+            </a>
+          </li>
+          <div />
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <div>
+        <h3>
+          Welcome to the Yodlr Design Challenge!
+        </h3>
+        <p>
+          Click 'Sign Up' to register.
+        </p>
+        <a
+          class="btn btn-primary"
+          href="/signup"
+        >
+          Sign Up
+        </a>
+      </div>
+    </main>
+  </div>
+</DocumentFragment>
+`;
