@@ -1,16 +1,16 @@
-var debug = require('debug')('frontend-code-challenge');
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var logger = require('./lib/logger');
-var cors = require('cors');
+const debug = require('debug')('frontend-code-challenge');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const logger = require('./lib/logger');
+const cors = require('cors');
 
-var users = require('./routes/users');
+const users = require('./routes/users');
 
-var app = express();
-var log = logger(app);
+const app = express();
+const log = logger(app);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -21,15 +21,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/users', users);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+app.use(function (req, res, next) {
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
 // development error handler
 // will print stacktrace
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   log.error(err);
   res.status(err.status || 500);
   res.json({
@@ -40,7 +40,7 @@ app.use(function(err, req, res, next) {
 
 app.set('port', process.env.PORT || 3000);
 
-var server = app.listen(app.get('port'), function() {
+const server = app.listen(app.get('port'), function () {
   log.info(
     'Express server listening on http://localhost:%d',
     server.address().port
