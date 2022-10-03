@@ -4,8 +4,8 @@ const _ = require('lodash');
 const logger = require('../lib/logger');
 const log = logger();
 
-const users = require('../init_data.json').data;
-const curId = _.size(users);
+let users = require('../init_data.json').data;
+let curId = _.size(users) + 1;
 
 /* GET users listing. */
 router.get('/', function (req, res) {

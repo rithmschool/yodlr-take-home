@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://our.playlist.com/signup.schema.json",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 60,
+      "format": "email"
+    },
+    "first-name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "last-name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    }
+  },
+  "additionalProperties": false,
+  "required": ["email", "password", "first-name", "last-name"]
+}
