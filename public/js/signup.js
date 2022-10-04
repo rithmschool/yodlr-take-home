@@ -1,12 +1,14 @@
 const $message = $('#message');
 const $signUpForm = $('#signUpForm');
 
+// POST /users
 $signUpForm.on('submit', evt => {
   evt.preventDefault();
-  submitForm(evt);
+  submitForm();
 });
 
-const submitForm = async evt => {
+const submitForm = async () => {
+  // GET FORM DATA FOR AXIOS REQ
   const emailInput = $('#emailInput').val();
   const firstNameInput = $('#firstNameInput').val();
   const lastNameInput = $('#lastNameInput').val();
@@ -17,7 +19,7 @@ const submitForm = async evt => {
     lastName: lastNameInput
   };
 
-  $signUpForm[0].reset();
+  $signUpForm[0].reset(); // reset form inputs
 
   try {
     const req = await axios.post(`/users`, body);
