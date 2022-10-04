@@ -29,22 +29,28 @@
     </div>
   </nav>
 
-  <h1>User Data</h1>
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">id</th>
-        <th scope="col">email</th>
-        <th scope="col">first name</th>
-        <th scope="col">last name</th>
-        <th scope="col">state</th>
-      </tr>
-    </thead>
-    <tbody id="userTable">
-      <!-- user data inserts here -->
-    </tbody>
-  </table>
-  
+  <div class="container mx-auto">
+    <div id="message" class="alert" role="alert"></div>
+
+    <h1>User Data</h1>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">email</th>
+          <th scope="col">first name</th>
+          <th scope="col">last name</th>
+          <th scope="col">state</th>
+        </tr>
+      </thead>
+      <tbody id="userTable">
+        <!-- user data inserts here -->
+      </tbody>
+    </table>
+
+  <!-- <button>Create New User</button> -->
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/axios/dist/axios.js"></script>
   <script src="js/admin.js"></script>
