@@ -2,13 +2,33 @@
 <html>
 <head>
   <meta charset=utf-8>
-  <title>Yodlr Design Challenge</title>
+  <title>Yodlr Home </title>
 </head>
 <body>
-  <h1>Yodlr Design Challenge</h1>
-  <p>
-    <a href="/signup.html">Registration Page</a><br/>
-    <a href="/admin.html">Admin Page</a>
-  </p>
+  <header>
+    <nav>
+      <div class="navbar-logo-container">
+        <a class="nav-link" href="#" id="nav-logo">Yodlr</a>
+      </div>
+      <div class="nav-right">
+        <a href="/admin.html"> Admin Page </a>
+        <a class="nav-link" href="/signup.html"> Sign up </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1> Home Page </h1>
+    <div>
+      <button> Login </button>
+      <a href="/signup.html">
+        <button> Sign Up </button>
+      </a>
+    </div>
+  </main>
 </body>
+
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+
+<script src="js/index.js"></script>
 </html>
