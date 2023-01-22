@@ -22,7 +22,6 @@ $regForm.submit(async function(evt){
         USER_DATA = await User.register(formData);
     }
     catch (error){
-        $regForm.prepend($(`<h5>${error}</h5>`));
+        $('#reg-form-error-messages').prepend($(`<h5>${error}</h5>`));
     }
-    localStorage.setItem('id', USER_DATA.user_id);
 });

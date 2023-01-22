@@ -1,11 +1,3 @@
-h1 {
-    text-align: right;
-    padding: 2%;
-    border-bottom: 5px solid green;
-    box-shadow: 2px 2px 5px grey;
-    margin-bottom: 20px;
-}
-
 #user-list {
     width: 90%;
     position: relative;

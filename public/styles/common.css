@@ -3,3 +3,13 @@
     padding: 0%;
     margin: 0%;
 }
+
+.page-header {
+    text-align: right;
+    padding: 2%;
+    color: rgb(107, 107, 107);
+    font-size: 1.5rem;
+    border-bottom: 5px solid rgb(59, 139, 59);
+    box-shadow: 2px 2px 5px grey;
+    margin-bottom: 20px;
+}
