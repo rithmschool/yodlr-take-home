@@ -7,9 +7,9 @@ class User {
         this.email = email;
         this.firstName = fName;
         this.lastName = lName;
-        this.name = fName + ' ' + lName;
         this.user_id = id;
-        this.admin = admin
+        this.admin = admin;
+        this.fullName = this.firstName + ' ' + this.lastName;
     };
 
     static async register(formData) {
@@ -25,6 +25,18 @@ class User {
             return user
         }
         catch(error){
+            console.error(error);
+            throw new Error(error.message);
+        }
+    };
+
+    static async getUsers() {
+        console.debug('User.getUsers()');
+
+        try{
+            const res = await axios.get(`${BASE_URL}/users`);
+            return res.data
+        }catch(error){
             console.error(error);
             throw new Error(error.message);
         }

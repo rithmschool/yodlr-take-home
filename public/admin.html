@@ -3,8 +3,28 @@
 <head>
   <meta charset=utf-8>
   <title>Yodlr Admin Page</title>
+  <link rel='stylesheet' href="/styles/common.css">
+  <link rel='stylesheet' href="/styles/admin.css">
 </head>
 <body>
-  List user data here
+  <header>
+    <nav>
+      <div class="navbar-logo-container">
+        <a class="nav-link" href="/index.html" id="nav-logo"> Yodlr </a>
+      </div>
+      <div class="nav-right">
+        <a class="nav-link" href="/signup.html"> Sign up </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1> Admin Page </h1>
+    <section id="user-list"> </section>
+  </main>
 </body>
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="js/models.js"></script>
+<script src="js/admin.js"></script>
+
 </html>

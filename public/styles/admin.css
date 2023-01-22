@@ -1,0 +1,28 @@
+h1 {
+    text-align: right;
+    padding: 2%;
+    border-bottom: 5px solid green;
+    box-shadow: 2px 2px 5px grey;
+    margin-bottom: 20px;
+}
+
+#user-list {
+    width: 90%;
+    position: relative;
+    left: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.user-info-card {
+    margin: 2%;
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+}
+
+.user-info-card p {
+    font-size: 1.25rem;
+    margin: 5px 0 0 25px;
+}
