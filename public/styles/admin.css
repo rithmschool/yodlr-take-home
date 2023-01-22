@@ -1,0 +1,20 @@
+#user-list {
+    width: 90%;
+    position: relative;
+    left: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.user-info-card {
+    margin: 2%;
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+}
+
+.user-info-card p {
+    font-size: 1.25rem;
+    margin: 5px 0 0 25px;
+}

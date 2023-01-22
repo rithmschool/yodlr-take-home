@@ -1,17 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset=utf-8>
-  <title>Yodlr Registration Portal</title>
-</head>
-<body>
-  <h1>Yodlr Registration Portal</h1>
-  <form>
-    Email: <input type="email" name="email"></br>
-    <button type="submit">Submit</button>
-  </form>
-  <p>
-    <a href="/admin.html">Admin Page</a>
-  </p>
-</body>
+  <head>
+    <meta charset=utf-8>
+    <title>Yodlr Registration Portal</title>
+    <link rel='stylesheet' href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/register.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar-logo-container">
+          <a class="nav-link" href="/" id="nav-logo">Yodlr</a>
+        </div>
+        <div class="nav-right">
+          <a href="/admin.html"> Admin Page </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1 class="page-header"> Registration Portal </h1>
+      <section>
+        <form id="reg-form">
+          <h3 class="form-title"> Register for a new account </h3>
+          <div id="reg-form-error-messages"></div>
+          <input type="email" name="email" placeholder='Valid email' required autocomplete="email">
+            </br>
+          <input type="text" name="first-name" placeholder='First name' required autocomplete="given-name">
+            </br>
+          <input type="text" name="last-name" placeholder='Last name' required autocomplete="family-name">
+            </br>
+          <input type="password" name="password" placeholder='Enter a password' required autocomplete="new-password">
+            </br>
+          <button type="submit"> Submit </button>
+        </form>
+      </section>
+    </main>
+  </body>
+<!-- Scripts ----------------------------------------->
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="js/models.js"></script>
+<script src="js/signup.js"></script>
 </html>
