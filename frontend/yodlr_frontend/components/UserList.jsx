@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import User from "./User";
+import axios from "axios";
+import { API_URL } from "../../constants";
 
 function UserList() {
     const [users, setUsers] = useState([]);
+    useEffect(() => {
+      let result = [];
+      const getUsers = async () => {
+        const result = await axios.get(`${API_URL}/users`);
+        return result.data;
+      }
+      getUsers().then((res) => setUsers(res))
+    },[]);
+    console.log(users)
     const userComponents = users.map(user => (
-    <User
-      id={user.id}
-      email={user.email}
-      firstName={user.firstName}
-      lastName={user.lastName}
-      state={user.state}
-    />
+    <User user={user}/>
   ));
 
   return (

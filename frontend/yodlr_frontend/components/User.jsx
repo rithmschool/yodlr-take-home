@@ -1,24 +1,16 @@
 import React, { useState } from "react";
 import { Card } from "react-bootstrap";
-import Axios from "axios"
 
 
-function User() {
-    const [users, setUsers] = useState("")
-    
-    const getUsers = () => {
-    Axios.get("http://localhost:3000/users").then(
-        (response) => {
-            setUsers(response.data)
-        }
-    )
-};
-
+function User( {user} ) {
     return(
         <Card className="h-100">
-            <Button onClick={getUsers}>See Users</Button>
             <Card.Body>
-                {users}
+                <h3>
+                {user.firstName} {user.lastName} 
+                </h3>
+                <p>{user.email}</p>
+                <h6>{user.state}</h6>
             </Card.Body>
         </Card>
     )

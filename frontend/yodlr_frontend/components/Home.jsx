@@ -3,7 +3,7 @@ import React from "react";
 function Home() {
     return (
       <div className="App">
-        <h1>try this</h1>
+        <h1>Welcome to the User Interface</h1>
       </div>
     )
   }
